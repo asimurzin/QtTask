@@ -63,6 +63,7 @@ UsersDB::UsersDB(bool first_server)
             boost::interprocess::shared_memory_object::remove(s_shared_memory_name.c_str());
             boost::interprocess::named_mutex::remove(s_shared_memory_named_mutex.c_str());
         }
+        exit(-1);
     }
 }
 
